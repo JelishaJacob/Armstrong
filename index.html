@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="n1" placeholder="Enter Number">
+    <button type="button" onclick="armsCheck()">CHECK</button>
+</body>
+<script>
+    // Armstrong Number
+    function armsCheck(){
+        number = parseInt(n1.value)
+        temp = number
+        sum = 0
+        while (temp > 0) {
+            let remainder = temp % 10
+            cube = remainder ** 3
+            sum += cube
+            temp = parseInt(temp / 10)
+        }
+        if (sum == number) {
+            alert(`${number} is an Armstrong Number`);
+        }
+        else {
+            alert(`${number} is not an Armstrong Number`);
+        }
+    }
+</script>
+
+</html>
